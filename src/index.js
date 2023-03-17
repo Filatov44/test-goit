@@ -32,6 +32,7 @@ body {
 	width: 100%;
 	height: auto;
  }
+ font-family: Montserrat;
 `;
 
 ReactDOM.createRoot(document.getElementById('root')).render(

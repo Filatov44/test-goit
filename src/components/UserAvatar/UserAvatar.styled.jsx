@@ -10,6 +10,7 @@ export const UserAvatarContainer = styled.div`
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 136px;
+	margin-bottom: 26px;
 	/* border: 1px dotted green; */
 	
 
