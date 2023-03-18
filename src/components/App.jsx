@@ -1,10 +1,11 @@
+import { AppContainer } from "./App.styled";
 import UserCard from "./UserCard/UserCard";
 
 
 export const App = () => {
   return (
-    <div>
+		<AppContainer>
 		<UserCard/>
-    </div>
+		</AppContainer>
   );
 };
