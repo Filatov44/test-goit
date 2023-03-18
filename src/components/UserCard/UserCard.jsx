@@ -13,6 +13,7 @@ export default function UserCard () {
 	
 	const [valueFollowers, setValueFollowers] = useState(parseInt(localStorage.getItem("followers")) || 100500);
 
+	const numFollowers = new Intl.NumberFormat('en-US').format(valueFollowers)
 	
 
 	const addFollow = () => {
@@ -23,7 +24,6 @@ export default function UserCard () {
 		setValueFollowers(value)
 		setFollow(isFollow);
 		
-		console.log(value);
 		localStorage.setItem("followers", JSON.stringify(value));
 		localStorage.setItem("isfollow", JSON.stringify(isFollow));
 	};
@@ -46,7 +46,7 @@ export default function UserCard () {
 		<Logo/>
 		<UserAvatar/>
 		<TextInfo quantity={"777"} value = {"tweets"} mb = {"16"}/>
-		<TextInfo quantity={valueFollowers} value = {"followers"} mb = {"26"}/>
+		<TextInfo quantity={numFollowers} value = {"followers"} mb = {"26"}/>
 		{follow ? <ButtonCounter btnTitle="following" bgcActive=" #5CD3A8" bgchActive="#9DE4CA" onClick={delFollow}/>: <ButtonCounter btnTitle="follow" bgcActive="" bgchActive="" onClick={addFollow}/>}
 		</ContainerUserCard>
 	)
